@@ -205,13 +205,12 @@ avg_bytes <- summarise(cran, avg_bytes = mean(size))
 ```{r}
 by_package <- group_by(cran, package)
 by_package
-by_package <- ungroup(by_package)
 
 ```
 
 20. Usa la función `summarise` sobre  el elemento agrupado y calcula  el valor medio de la variable `size`. Observa el efecto del agrupamiento en el resultado.
 ```{r}
-
+by_package %>% summarise(mean(size))
 ```
 21. Para el agrupamiento creado calcula: 
 + . count = n()
