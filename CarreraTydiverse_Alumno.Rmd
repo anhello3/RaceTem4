@@ -271,7 +271,9 @@ top_unique_sorted <- pack_sum %>%
 
 ```{r}
 
-
+cran %>%
+  select(ip_id, country, package, size) %>%
+  print()
 ```
 
 26. Añade una columna llamada `size_mb` que contenga el tamaño de cada descarga en megabytes.
